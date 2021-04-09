@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Desarrollo Full Stack. Bloque III: Lab V API's HTML5">
+        <meta name="author" content="Julia López Sánchez">
+        <meta name="date" content="18 feb 2021">
+
+        <title>Lab V - API's HTML5</title>
+
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- CSS styles -->
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
+
+        <script type="text/javascript">
+        var vid = document.getElementById("video");
+        vid.onloadeddata = function() {
+            alert("Browser has loaded the current frame");
+        };
+            function fail_load(){
+                alert("Error al cargar");
+            }
+            
+        </script>
+
+    </head>
+
+    <body>
+        <h1 class="title">Reproductor de Vídeo - API's HTML5 </h1>
+        <div class="video">
+            <video id="video" controls 
+                src="video.mp4"
+                type="video/mp4"
+                poster="video-tittle.png"
+                onerror="fail_load()"
+                onload="">
+                El reproductor que estás usando no permite reproducir este contenido.
+            </video>
+        </div>
+
+        <div class="buttons">
+            <button class="btn" onclick="document.getElementById('video').play();" placeholder="Play"><i class="fa fa-play"></i></button>
+            <button class="btn" onclick="document.getElementById('video').pause();"><i class="fa fa-pause"></i></button>
+            <button class="btn" onclick="document.getElementById('video').volume -= 0.1;"><i class="fa fa-volume-down"></i></button>
+            <button class="btn" onclick="document.getElementById('video').volume += 0.1;"><i class="fa fa-volume-up"></i></button>
+        </div> 
+    </body>
+
+    
+</html>
+
+
